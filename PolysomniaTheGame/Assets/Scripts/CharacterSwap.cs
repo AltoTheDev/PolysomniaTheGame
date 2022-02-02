@@ -52,12 +52,12 @@ public class CharacterSwap : MonoBehaviour
     public void Swap()
     {
         character = possibleCharacters[whichCharacter];
-        character.GetComponent<ThirdPersonMovement>().enabled = true;
+        character.GetComponent<PlayerMovement>().enabled = true;
         for (int i = 0; i < possibleCharacters.Count; i++)
         {
             if (possibleCharacters[i] != character)
             {
-                possibleCharacters[i].GetComponent<ThirdPersonMovement>().enabled = false; 
+                possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false; 
             }
         }
     }

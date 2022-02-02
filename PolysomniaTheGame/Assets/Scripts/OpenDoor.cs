@@ -15,7 +15,7 @@ public class OpenDoor : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Enemy")
         {
             openDoor.Play("OpenDoor");
         }
