@@ -106,7 +106,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
     }
 
-    private void Movement()
+    public void Movement()
     {
         //Extra gravity
         rb.AddForce(Vector3.down * Time.deltaTime * 10);
