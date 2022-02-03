@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
+
 
 public class CharacterSwap : MonoBehaviour
 {
@@ -9,6 +11,10 @@ public class CharacterSwap : MonoBehaviour
     public List<Transform> possibleCharacters;
 
     public int whichCharacter;
+
+    public CinemachineVirtualCamera cam1;
+    public CinemachineVirtualCamera cam2;
+    public CinemachineVirtualCamera cam3;
 
     private void Start()
     {
@@ -59,6 +65,27 @@ public class CharacterSwap : MonoBehaviour
             {
                 possibleCharacters[i].GetComponent<PlayerMovement>().enabled = false; 
             }
+        }
+
+         if (whichCharacter == 0)
+        {
+            cam1.Priority = 10;
+            cam2.Priority = 0;
+            cam3.Priority = 0;
+        }
+
+        if (whichCharacter == 1)
+        {
+            cam1.Priority = 0;
+            cam2.Priority = 10;
+            cam3.Priority = 0;
+        }
+
+        if (whichCharacter == 2)
+        {
+            cam1.Priority = 0;
+            cam2.Priority = 0;
+            cam3.Priority = 10;
         }
     }
 }
