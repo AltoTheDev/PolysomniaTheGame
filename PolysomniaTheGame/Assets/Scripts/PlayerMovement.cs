@@ -9,6 +9,12 @@ public class PlayerMovement : MonoBehaviour
     public Transform playerCam;
     public Transform orientation;
 
+    public float mouseSensetivity = 100f;
+
+    public Transform playerBody;
+
+    float xmRotation = 0f;
+
     //Other
     private Rigidbody rb;
 
@@ -85,6 +91,19 @@ public class PlayerMovement : MonoBehaviour
             StartCrouch();
         if (Input.GetKeyUp(KeyCode.LeftControl))
             StopCrouch();
+    }
+
+    private void Mouse()
+    {
+
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensetivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensetivity * Time.deltaTime;
+
+        xmRotation -= mouseY;
+        xmRotation = Mathf.Clamp(xmRotation, -90f, 90f);
+
+        transform.localRotation = Quaternion.Euler(xmRotation, 0f, 0f);
+        playerBody.Rotate(Vector3.up * mouseX);
     }
 
     private void StartCrouch()
