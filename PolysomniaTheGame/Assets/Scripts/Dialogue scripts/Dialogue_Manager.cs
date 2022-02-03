@@ -10,7 +10,7 @@ public class Dialogue_Manager: MonoBehaviour
     public TMP_Text dialoguetext;
     public Animator animator;
     private Queue<string> sentences;
-
+    public Transform character;
     void Start()
     {
         sentences = new Queue<string>();
@@ -57,6 +57,12 @@ public class Dialogue_Manager: MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+
+
+
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
+
+
     }
 
 }
