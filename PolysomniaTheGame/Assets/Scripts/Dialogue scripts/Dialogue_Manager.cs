@@ -62,7 +62,8 @@ public class Dialogue_Manager: MonoBehaviour
 
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = true;
 
-
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 }

@@ -13,6 +13,9 @@ public class Dialogue_Trigger : MonoBehaviour
         FindObjectOfType<Dialogue_Manager>().StartDialogue(dialogue);
 
         GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
+
+         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     private void OnCollisionEnter(Collision collision)
     {
@@ -23,4 +26,5 @@ public class Dialogue_Trigger : MonoBehaviour
             
     }
 
+    
 }
