@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e5b3ecacc1c9b8148ac2d10ac666c2f4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - American Typewriter
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: da939b8323773a5499356fe0fd160f00, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
