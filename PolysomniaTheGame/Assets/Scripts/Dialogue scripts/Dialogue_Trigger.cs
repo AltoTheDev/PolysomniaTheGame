@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Dialogue_Trigger : MonoBehaviour
 {
-        public Dialogue dialogue;
+        public Dialogue dialogue; 
+        
         public void TriggerDialogue()
         {
             FindObjectOfType<Dialogue_Manager>().StartDialogue(dialogue);
+
+        
+            
         }
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player") == true)
+            TriggerDialogue();
+    }
+
 }
