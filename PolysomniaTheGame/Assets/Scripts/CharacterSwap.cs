@@ -26,6 +26,7 @@ public class CharacterSwap : MonoBehaviour
     }
     void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             if (whichCharacter == 0)
