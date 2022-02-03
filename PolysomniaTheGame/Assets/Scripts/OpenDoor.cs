@@ -5,7 +5,7 @@ using UnityEngine;
 public class OpenDoor : MonoBehaviour
 {
     private Animator openDoor;
-
+    public Collider collide;
    
 
 
@@ -17,7 +17,9 @@ public class OpenDoor : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            openDoor.Play("OpenDoor");
+            openDoor.Play("OpenDoor7");
+            collide.enabled = !collide.enabled;
+
         }
     }
 
