@@ -60,6 +60,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         playerScale = transform.localScale;
+        
     }
 
 

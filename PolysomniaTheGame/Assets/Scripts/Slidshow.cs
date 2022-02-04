@@ -10,6 +10,10 @@ public class Slidshow : MonoBehaviour
     public GameObject slide3;
     public GameObject slide4;
 
+    public GameObject Eve;
+    public GameObject Freedom;
+    public GameObject choices;
+
     public void Slide2()
     {
         slide1.SetActive(false);
@@ -27,8 +31,26 @@ public class Slidshow : MonoBehaviour
     public void StartGame()
     {
         slide4.SetActive(false);
-       
-        Cursor.lockState = CursorLockMode.Locked;
+
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+       
+    }
+
+    public void FreeEve()
+    {
+        
+        Eve.transform.position = Freedom.transform.position;
+        choices.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
+    }
+
+    public void DontFree()
+    {
+        choices.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
